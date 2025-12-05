@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Primeira Barbearia por Assinatura do Brasil. Cortes ilimitados a partir de R$ 129/mês. Ganhe seu primeiro corte GRÁTIS!">
+    <title>Barbearia Seu Souza - Assinatura | Primeiro Corte Grátis</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #C4A876;
+            --black: #000000;
+            --white: #FFFFFF;
+            --gray-dark: #1A1A1A;
+            --gray-medium: #333333;
+            --gray-light: #F5F5F5;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--black);
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* HEADER */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(196, 168, 118, 0.2);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .logo img {
+            height: 70px;
+            width: auto;
+        }
+
+        .logo-slogan {
+            font-size: 11px;
+            color: var(--gold);
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .header-support {
+            background: rgba(196, 168, 118, 0.1);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header-support:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: translateY(-2px);
+        }
+
+        .header-cta {
+            background: linear-gradient(135deg, var(--gold), #D4B886);
+            color: var(--black);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(196, 168, 118, 0.3);
+        }
+
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(196, 168, 118, 0.5);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            margin-top: 90px;
+            background: linear-gradient(135deg, #000000 0%, #1A1A1A 100%);
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 50%;
+            background: linear-gradient(90deg, rgba(196, 168, 118, 0.05) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            padding: 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(196, 168, 118, 0.15);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.6s ease 0.2s backwards;
+        }
+
+        .hero-gold {
+            color: var(--gold);
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+            animation: fadeInUp 0.6s ease 0.4s backwards;
+        }
+
+        .hero-price {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 10px;
+            animation: fadeInUp 0.6s ease 0.6s backwards;
+        }
+
+        .hero-price-detail {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+            animation: fadeInUp 0.6s ease 0.8s backwards;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), #D4B886);
+            color: var(--black);
+            padding: 22px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(196, 168, 118, 0.4);
+            animation: fadeInUp 0.6s ease 1s backwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .hero-cta:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(196, 168, 118, 0.6);
+        }
+
+        .hero-benefits {
+            margin-top: 40px;
+            display: flex;
+            gap: 30px;
+            animation: fadeInUp 0.6s ease 1.2s backwards;
+        }
+
+        .hero-benefit {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 15px;
+        }
+
+        .hero-benefit::before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .hero-image {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, transparent 50%);
+        }
+
+        /* SOCIAL PROOF */
+        .social-proof {
+            background: var(--gold);
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .social-proof-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 0 40px;
+        }
+
+        .social-stat {
+            text-align: center;
+        }
+
+        .social-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--black);
+            font-family: 'Cinzel', serif;
+        }
+
+        .social-label {
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.8);
+            font-weight: 600;
+        }
+
+        /* COMO FUNCIONA */
+        .how-it-works {
+            padding: 120px 40px;
+            background: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 48px;
+            color: var(--black);
+            margin-bottom: 20px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 80px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .steps-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--gold), #D4B886);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--black);
+            margin: 0 auto 30px;
+            font-family: 'Cinzel', serif;
+            box-shadow: 0 10px 30px rgba(196, 168, 118, 0.3);
+        }
+
+        .step h3 {
+            font-size: 22px;
+            color: var(--black);
+            margin-bottom: 15px;
+        }
+
+        .step p {
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.7);
+            line-height: 1.6;
+        }
+
+        /* PLANOS */
+        .plans {
+            padding: 120px 40px;
+            background: linear-gradient(135deg, #000000 0%, #1A1A1A 100%);
+        }
+
+        .plans .section-title {
+            color: var(--white);
+        }
+
+        .plans .section-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .plans-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .plan-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid rgba(196, 168, 118, 0.2);
+            border-radius: 20px;
+            padding: 50px 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--gold), #D4B886);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .plan-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .plan-card.featured {
+            background: linear-gradient(135deg, rgba(196, 168, 118, 0.15), rgba(196, 168, 118, 0.05));
+            border: 2px solid var(--gold);
+            transform: scale(1.05);
+        }
+
+        .plan-card.featured::before {
+            transform: scaleX(1);
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 60px rgba(196, 168, 118, 0.3);
+        }
+
+        .plan-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--black);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .plan-name {
+            font-size: 32px;
+            color: var(--white);
+            margin-bottom: 15px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .plan-description {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 30px;
+        }
+
+        .plan-price {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .plan-price span {
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .plan-period {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 30px;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .plan-features li {
+            padding: 12px 0;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .plan-features li::before {
+            content: '✓';
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .plan-cta {
+            display: block;
+            background: linear-gradient(135deg, var(--gold), #D4B886);
+            color: var(--black);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .plan-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(196, 168, 118, 0.5);
+        }
+
+        /* DIFERENCIAIS */
+        .differentials {
+            padding: 120px 40px;
+            background: var(--white);
+        }
+
+        .differentials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+
+        .differential {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .differential:hover {
+            background: rgba(196, 168, 118, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .differential-icon {
+            font-size: 64px;
+            margin-bottom: 25px;
+        }
+
+        .differential h3 {
+            font-size: 24px;
+            color: var(--black);
+            margin-bottom: 15px;
+        }
+
+        .differential p {
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.7);
+            line-height: 1.6;
+        }
+
+        /* INDIQUE E GANHE */
+        .referral {
+            padding: 120px 40px;
+            background: linear-gradient(135deg, var(--gold), #D4B886);
+            text-align: center;
+        }
+
+        .referral .section-title {
+            color: var(--black);
+        }
+
+        .referral-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .referral-benefits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin: 60px 0;
+        }
+
+        .referral-benefit {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 50px 40px;
+            border-radius: 20px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .referral-benefit-icon {
+            font-size: 72px;
+            margin-bottom: 20px;
+        }
+
+        .referral-benefit h3 {
+            font-size: 28px;
+            color: var(--black);
+            margin-bottom: 15px;
+        }
+
+        .referral-benefit p {
+            font-size: 18px;
+            color: rgba(0, 0, 0, 0.8);
+            font-weight: 600;
+        }
+
+        .referral-cta {
+            display: inline-block;
+            background: var(--black);
+            color: var(--gold);
+            padding: 22px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .referral-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* GALERIA */
+        .gallery {
+            padding: 120px 40px;
+            background: var(--black);
+        }
+
+        .gallery .section-title {
+            color: var(--white);
+        }
+
+        .gallery .section-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .gallery-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            aspect-ratio: 1;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(196, 168, 118, 0.3), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        /* DEPOIMENTOS */
+        .testimonials {
+            padding: 120px 40px;
+            background: var(--gray-light);
+        }
+
+        .testimonials-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .testimonial {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(0, 0, 0, 0.8);
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--black);
+            font-size: 16px;
+        }
+
+        .testimonial-role {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.5);
+            margin-top: 5px;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 120px 40px;
+            background: var(--white);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--gold);
+        }
+
+        .faq-question {
+            padding: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--black);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--gold);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 28px;
+            color: var(--gold);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 30px 30px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        /* CTA FINAL */
+        .final-cta {
+            padding: 120px 40px;
+            background: linear-gradient(135deg, #000000 0%, #1A1A1A 100%);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 56px;
+            color: var(--white);
+            margin-bottom: 30px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .final-cta-gold {
+            color: var(--gold);
+        }
+
+        .final-cta p {
+            font-size: 22px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), #D4B886);
+            color: var(--black);
+            padding: 25px 60px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(196, 168, 118, 0.4);
+        }
+
+        .final-cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(196, 168, 118, 0.6);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--black);
+            padding: 80px 40px 40px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo img {
+            height: 60px;
+            margin-bottom: 25px;
+        }
+
+        .footer-description {
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 30px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(196, 168, 118, 0.1);
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+        }
+
+        /* APP BADGES */
+        .app-badges {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .app-badge {
+            height: 45px;
+            transition: transform 0.3s ease;
+        }
+
+        .app-badge:hover {
+            transform: translateY(-3px);
+        }
+
+        /* MOBILE STICKY CTA */
+        .mobile-sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--black);
+            padding: 15px 20px;
+            z-index: 999;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .mobile-sticky-cta a {
+            display: block;
+            background: linear-gradient(135deg, var(--gold), #D4B886);
+            color: var(--black);
+            padding: 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1200px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content {
+                padding: 60px 40px;
+            }
+
+            .hero-image {
+                min-height: 400px;
+            }
+
+            .plans-container {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .plan-card.featured {
+                transform: scale(1);
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 20px;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+
+            .header-cta {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .hero-price {
+                font-size: 42px;
+            }
+
+            .hero-benefits {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .section-subtitle {
+                font-size: 18px;
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .differentials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .referral-benefits {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .mobile-sticky-cta {
+                display: block;
+            }
+
+            .social-proof-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="images/logo-horizontal.png" alt="Barbearia Seu Souza">
+                </div>
+                <div class="logo-slogan">ONDE O HOMEM SE RENOVA</div>
+            </div>
+            <a href="https://wa.me/5511947026014?text=Ol%C3%A1%21%20Quero%20conhecer%20os%20planos%20de%20assinatura%20e%20ganhar%20meu%20PRIMEIRO%20CORTE%20GR%C3%81TIS%21" class="header-cta">FALAR NO WHATSAPP</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">🎁 A PRIMEIRA NO BRASIL</span>
+            <h1>
+                Barbearia por<br>
+                <span class="hero-gold">Assinatura</span>
+            </h1>
+            <p class="hero-subtitle">Cortes ilimitados. Qualidade premium. Economia garantida.</p>
+
+            <div class="hero-price">R$ 129<span>/mês</span></div>
+            <p class="hero-price-detail">Plano FLEX • Seg a Qui</p>
+
+            <a href="https://wa.me/5511947026014?text=Ol%C3%A1%21%20Quero%20GANHAR%20MEU%20PRIMEIRO%20CORTE%20GR%C3%81TIS%20e%20conhecer%20o%20Plano%20FLEX%20de%20R%24%20129%2Fm%C3%AAs%21" class="hero-cta">
+                GANHAR PRIMEIRO CORTE GRÁTIS
+            </a>
+
+            <div class="hero-benefits">
+                <div class="hero-benefit">Sem fidelidade</div>
+                <div class="hero-benefit">Cancele quando quiser</div>
+                <div class="hero-benefit">10% OFF em extras</div>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/hero-image.jpg" alt="Cliente Barbearia Seu Souza">
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="social-proof">
+        <div class="social-proof-container">
+            <div class="social-stat">
+                <div class="social-number">239</div>
+                <div class="social-label">Avaliações 5 Estrelas</div>
+            </div>
+            <div class="social-stat">
+                <div class="social-number">127+</div>
+                <div class="social-label">Assinantes Ativos</div>
+            </div>
+            <div class="social-stat">
+                <div class="social-number">1ª</div>
+                <div class="social-label">Barbearia por Assinatura do Brasil</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="how-it-works">
+        <h2 class="section-title">Como Funciona</h2>
+        <p class="section-subtitle">Em 4 passos simples, você se torna membro do clube mais exclusivo de São Paulo</p>
+
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Escolha seu Plano</h3>
+                <p>Selecione o plano que mais se encaixa na sua rotina e orçamento</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Baixe o App</h3>
+                <p>Faça download do nosso app e crie sua conta em menos de 2 minutos</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Agende seu Corte</h3>
+                <p>Escolha data, horário e profissional direto pelo app quando quiser</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Aproveite Ilimitado</h3>
+                <p>Use quantas vezes quiser dentro do seu plano. Sem limites!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section class="plans">
+        <h2 class="section-title">Escolha seu Plano</h2>
+        <p class="section-subtitle">Todos os planos incluem: Cortes ilimitados • 10% OFF em serviços extras • App exclusivo • Sem fidelidade</p>
+
+        <div class="plans-container">
+            <!-- PLANO FLEX -->
+            <div class="plan-card featured">
+                <span class="plan-badge">MAIS POPULAR</span>
+                <h3 class="plan-name">FLEX</h3>
+                <p class="plan-description">Perfeito para quem tem flexibilidade de horários</p>
+
+                <div class="plan-price">R$ 129<span>/mês</span></div>
+                <p class="plan-period">Segunda a Quinta</p>
+
+                <ul class="plan-features">
+                    <li>Cortes ilimitados seg a qui</li>
+                    <li>Agendamento pelo app</li>
+                    <li>10% desconto em serviços extras</li>
+                    <li>Totem de autoatendimento</li>
+                    <li>Primeiro corte GRÁTIS fechando assinatura</li>
+                    <li>Cancele com 15 dias de antecedência</li>
+                </ul>
+
+                <a href="https://wa.me/5511947026014?text=Ol%C3%A1%21%20Quero%20assinar%20o%20Plano%20FLEX%20por%20R%24%20129%2Fm%C3%AAs%20e%20ganhar%20meu%20primeiro%20corte%20gr%C3%A1tis%21" class="plan-cta">ASSINAR PLANO FLEX</a>
+            </div>
+
+            <!-- PLANO PREMIUM -->
+            <div class="plan-card">
+                <h3 class="plan-name">PREMIUM</h3>
+                <p class="plan-description">Liberdade total para ir quando quiser</p>
+
+                <div class="plan-price">R$ 269<span>/mês</span></div>
+                <p class="plan-period">Todos os dias da semana</p>
+
+                <ul class="plan-features">
+                    <li>Cortes ilimitados 7 dias</li>
+                    <li>Prioridade no agendamento</li>
+                    <li>10% desconto em serviços extras</li>
+                    <li>Agendamento expresso pelo app</li>
+                    <li>Primeiro corte GRÁTIS fechando assinatura</li>
+                    <li>Cancele com 15 dias de antecedência</li>
+                </ul>
+
+                <a href="https://wa.me/5511947026014?text=Ol%C3%A1%21%20Quero%20assinar%20o%20Plano%20PREMIUM%20por%20R%24%20269%2Fm%C3%AAs%20e%20ter%20acesso%20todos%20os%20dias%21" class="plan-cta">ASSINAR PREMIUM</a>
+            </div>
+
+            <!-- PLANO BLACK VIP -->
+            <div class="plan-card">
+                <span class="plan-badge">VIP</span>
+                <h3 class="plan-name">BLACK VIP</h3>
+                <p class="plan-description">Agende até 4 vezes no mês sem precisar finalizar o corte anterior</p>
+
+                <div class="plan-price">R$ 369<span>/mês</span></div>
+                <p class="plan-period">Todos os dias + benefícios VIP</p>
+
+                <ul class="plan-features">
+                    <li>Cortes ilimitados 7 dias</li>
+                    <li>Agende 4 vezes seguidas no mês (1 pessoa)</li>
+                    <li>Não precisa finalizar corte para agendar novo</li>
+                    <li>10% desconto em serviços extras</li>
+                    <li>Atendimento prioritário VIP</li>
+                    <li>Primeiro corte GRÁTIS fechando assinatura</li>
+                    <li>Cancele com 15 dias de antecedência</li>
+                </ul>
+
+                <a href="https://wa.me/5511947026014?text=Ol%C3%A1%21%20Quero%20assinar%20o%20Plano%20BLACK%20VIP%20por%20R%24%20369%2Fm%C3%AAs%20e%20agendar%20at%C3%A9%204%20vezes%20seguidas%21" class="plan-cta">ASSINAR BLACK VIP</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="differentials">
+        <h2 class="section-title">Por que Ser Assinante?</h2>
+        <p class="section-subtitle">Mais do que cortes. Uma experiência premium completa.</p>
+
+        <div class="differentials-grid">
+            <div class="differential">
+                <div class="differential-icon">📱</div>
+                <h3>App Exclusivo</h3>
+                <p>Agende quando quiser, onde estiver. Veja disponibilidade em tempo real e gerencie sua assinatura.</p>
+            </div>
+
+            <div class="differential">
+                <div class="differential-icon">🎯</div>
+                <h3>Totem Inteligente</h3>
+                <p>Check-in rápido e prático. Chegou, se registrou no totem e já está na fila de atendimento.</p>
+            </div>
+
+            <div class="differential">
+                <div class="differential-icon">💳</div>
+                <h3>Pagamento Automático</h3>
+                <p>Débito automático no app. Sem preocupação, sem filas no caixa, sem complicação.</p>
+            </div>
+
+            <div class="differential">
+                <div class="differential-icon">🎁</div>
+                <h3>Primeiro Corte Grátis</h3>
+                <p>Assine hoje e ganhe seu primeiro corte por nossa conta. Conheça sem compromisso.</p>
+            </div>
+
+            <div class="differential">
+                <div class="differential-icon">💰</div>
+                <h3>10% OFF em Extras</h3>
+                <p>Barba, sombrancelha, barboterapia e outros serviços com 10% de desconto sempre.</p>
+            </div>
+
+            <div class="differential">
+                <div class="differential-icon">🚪</div>
+                <h3>Sem Fidelidade</h3>
+                <p>Cancele quando quiser pelo app. Sem taxas, sem multas, sem burocracia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDIQUE E GANHE -->
+    <section class="referral">
+        <h2 class="section-title">Indique e Ganhe</h2>
+        <div class="referral-content">
+            <p style="font-size: 20px; color: rgba(0,0,0,0.8); margin-bottom: 20px;">Compartilhe com amigos e ambos ganham!</p>
+
+            <div class="referral-benefits">
+                <div class="referral-benefit">
+                    <div class="referral-benefit-icon">🎁</div>
+                    <h3>Seu Amigo Ganha</h3>
+                    <p>30% OFF na primeira assinatura</p>
+                </div>
+
+                <div class="referral-benefit">
+                    <div class="referral-benefit-icon">⭐</div>
+                    <h3>Você Ganha</h3>
+                    <p>1 serviço extra à escolha GRÁTIS</p>
+                </div>
+            </div>
+
+            <a href="https://wa.me/5511947026014?text=Ol%C3%A1%21%20Quero%20indicar%20um%20amigo%20e%20participar%20do%20programa%20Indique%20e%20Ganhe%21" class="referral-cta">INDICAR AMIGO AGORA</a>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="gallery">
+        <h2 class="section-title">Nossos Trabalhos</h2>
+        <p class="section-subtitle">Veja a qualidade e o estilo dos nossos cortes profissionais</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/gallery/corte-1.jpg" alt="Corte profissional" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery/corte-2.jpg" alt="Corte profissional" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery/corte-3.jpg" alt="Corte profissional" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery/corte-4.jpg" alt="Corte profissional" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="testimonials">
+        <h2 class="section-title">O Que Dizem Nossos Assinantes</h2>
+        <p class="section-subtitle">239 avaliações 5 estrelas no Google. Veja o que falam sobre nós:</p>
+
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Melhor investimento que fiz! Pago R$ 129/mês e vou 3x por semana. Economizo muito e sempre estou com o visual em dia. O app é super prático!"</p>
+                <div class="testimonial-author">Carlos Mendes</div>
+                <div class="testimonial-role">Assinante há 8 meses • Plano FLEX</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Atendimento impecável, ambiente top e o esquema da assinatura é genial. Indiquei 3 amigos já. O totem de autoatendimento agiliza demais!"</p>
+                <div class="testimonial-author">Rafael Santos</div>
+                <div class="testimonial-role">Assinante há 1 ano • Plano PREMIUM</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Sou do Plano BLACK VIP e consigo agendar para mim e meus filhos ao mesmo tempo. Praticidade total! Vale cada centavo."</p>
+                <div class="testimonial-author">Marcelo Oliveira</div>
+                <div class="testimonial-role">Assinante há 6 meses • Plano BLACK VIP</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Sempre cortei em casa, mas resolvi testar por causa do primeiro corte grátis. Hoje não largo mais! Profissionais excelentes e ambiente diferenciado."</p>
+                <div class="testimonial-author">Bruno Costa</div>
+                <div class="testimonial-role">Assinante há 4 meses • Plano FLEX</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"O desconto de 10% nos extras é ótimo! Faço barba e corte sempre. A assinatura já se pagou várias vezes. Recomendo demais!"</p>
+                <div class="testimonial-author">Thiago Almeida</div>
+                <div class="testimonial-role">Assinante há 10 meses • Plano PREMIUM</div>
+            </div>
+
+            <div class="testimonial">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Poder cancelar quando quiser me deu segurança pra testar. Mas já faz 7 meses e não penso em sair. Melhor custo-benefício impossível!"</p>
+                <div class="testimonial-author">Felipe Rodrigues</div>
+                <div class="testimonial-role">Assinante há 7 meses • Plano FLEX</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <p class="section-subtitle">Tire suas dúvidas sobre a assinatura</p>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">Como funciona o primeiro corte grátis?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        É simples: ao fechar sua assinatura em qualquer plano, você ganha o primeiro corte completamente grátis. A cobrança mensal da assinatura só começa após seu primeiro atendimento. É nossa forma de você conhecer a qualidade do serviço antes de começar a pagar!
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Posso cancelar a qualquer momento?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sim! Não temos fidelidade. Você pode cancelar quando quiser direto pelo app ou WhatsApp, precisando apenas avisar com 15 dias de antecedência. Sem taxas, multas ou burocracia. Seu acesso continua até o final do período já pago.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Como faço para agendar?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Após assinar, você baixa nosso app (iOS ou Android), cria sua conta, e já pode agendar. Escolhe o profissional, data e horário. Tudo em tempo real. Recebe notificações e pode remarcar quando precisar.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">O que é o Plano BLACK VIP e como funcionam os 4 agendamentos?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        No Plano BLACK VIP (individual), você pode agendar até 4 vezes seguidas no mês sem precisar finalizar o corte anterior. Nos outros planos, você precisa vir, fazer o corte e finalizar o atendimento para poder agendar novamente. No BLACK VIP, você agenda os 4 cortes do mês de uma vez só, garantindo seus horários preferidos antecipadamente.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Como funciona o desconto de 10% nos serviços extras?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Todo assinante tem 10% de desconto em qualquer serviço extra: barba, sombrancelha, barboterapia, etc. O desconto é automático quando você se identifica no totem ou no agendamento.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Tem limite de cortes por mês?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Não! Você pode cortar quantas vezes quiser dentro dos dias permitidos no seu plano. FLEX: seg a qui ilimitado. PREMIUM e BLACK VIP: todos os dias ilimitado.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Como funciona o programa "Indique e Ganhe"?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Quando você indica um amigo e ele assina, ele ganha 30% OFF na primeira mensalidade e você ganha 1 serviço extra grátis à escolha (barba, sombrancelha, etc). Você pode indicar quantos amigos quiser!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="final-cta">
+        <h2>Pronto para <span class="final-cta-gold">Economizar</span><br>e Ficar Sempre no Ponto?</h2>
+        <p>Mais de 127 homens já fazem parte do clube mais exclusivo de São Paulo.<br>Junte-se a eles e ganhe seu primeiro corte grátis hoje!</p>
+
+        <a href="https://wa.me/5511947026014?text=Ol%C3%A1%21%20Quero%20me%20tornar%20assinante%20da%20Barbearia%20Seu%20Souza%20e%20GANHAR%20MEU%20PRIMEIRO%20CORTE%20GR%C3%81TIS%21" class="final-cta-button">
+            GARANTIR PRIMEIRO CORTE GRÁTIS
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="images/logo-horizontal.png" alt="Barbearia Seu Souza">
+                </div>
+                <p class="footer-description">
+                    A primeira barbearia por assinatura do Brasil. Onde o homem se renova com estilo, qualidade e economia.
+                </p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/barbeariaseusouza" class="social-link" target="_blank">📷</a>
+                    <a href="https://facebook.com/barbeariaseusouza" class="social-link" target="_blank">f</a>
+                    <a href="https://wa.me/5511947026014" class="social-link" target="_blank">💬</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Planos</h4>
+                <ul class="footer-links">
+                    <li><a href="https://wa.me/5511947026014?text=Quero%20saber%20mais%20sobre%20o%20Plano%20FLEX">Plano FLEX</a></li>
+                    <li><a href="https://wa.me/5511947026014?text=Quero%20saber%20mais%20sobre%20o%20Plano%20PREMIUM">Plano PREMIUM</a></li>
+                    <li><a href="https://wa.me/5511947026014?text=Quero%20saber%20mais%20sobre%20o%20Plano%20BLACK%20VIP">Plano BLACK VIP</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Empresa</h4>
+                <ul class="footer-links">
+                    <li><a href="#how-it-works">Como Funciona</a></li>
+                    <li><a href="https://wa.me/5511947026014?text=Quero%20indicar%20um%20amigo">Indique e Ganhe</a></li>
+                    <li><a href="https://wa.me/5511947026014">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Baixe o App</h4>
+                <div class="app-badges">
+                    <a href="https://apps.apple.com/br/app/barbearia-seu-souza/id6753869095" target="_blank">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download na App Store" class="app-badge">
+                    </a>
+                </div>
+                <div class="app-badges">
+                    <a href="https://play.google.com/store/apps/details?id=barbeariaseusouza.bestbarbers.app" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Download no Google Play" class="app-badge">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 Barbearia Seu Souza. Todos os direitos reservados. | CNPJ: XX.XXX.XXX/XXXX-XX
+        </div>
+    </footer>
+
+    <!-- MOBILE STICKY CTA -->
+    <div class="mobile-sticky-cta">
+        <a href="https://wa.me/5511947026014?text=Ol%C3%A1%21%20Quero%20ganhar%20meu%20PRIMEIRO%20CORTE%20GR%C3%81TIS%21">
+            GANHAR PRIMEIRO CORTE GRÁTIS
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Fecha todas as outras
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                // Abre a clicada se não estava aberta
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Google Tag Manager DataLayer (preparado para quando você configurar GTM)
+        window.dataLayer = window.dataLayer || [];
+
+        // Track CTA clicks
+        document.querySelectorAll('.hero-cta, .header-cta, .plan-cta, .referral-cta, .final-cta-button').forEach(cta => {
+            cta.addEventListener('click', function() {
+                window.dataLayer.push({
+                    'event': 'cta_click',
+                    'cta_location': this.className,
+                    'cta_text': this.textContent.trim()
+                });
+            });
+        });
+
+        // Track scroll depth
+        let scrollTracked = {
+            '25': false,
+            '50': false,
+            '75': false,
+            '100': false
+        };
+
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+            Object.keys(scrollTracked).forEach(threshold => {
+                if (scrollPercent >= threshold && !scrollTracked[threshold]) {
+                    scrollTracked[threshold] = true;
+                    window.dataLayer.push({
+                        'event': 'scroll_depth',
+                        'scroll_percentage': threshold
+                    });
+                }
+            });
+        });
+
+        // Animação de entrada dos elementos
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Adiciona animação aos elementos
+        document.querySelectorAll('.step, .plan-card, .differential, .testimonial').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
